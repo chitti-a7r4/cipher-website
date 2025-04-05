@@ -48,23 +48,30 @@
 		transform: translate(-50%, -50%);
 		text-align: center;
 		color: white;
-		font-size: 2rem;
 		font-weight: bold;
 		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 		max-width: 90vw;
 		padding: 1rem;
 		box-sizing: border-box;
+		word-wrap: break-word;
+	}
+
+	.overlay-text h2 {
+		font-size: 2rem;
+		line-height: 1.2;
+		margin: 0;
+		padding: 0;
+	}
+
+	@media (max-width: 768px) {
+		.overlay-text h2 {
+			font-size: 1.4rem;
+		}
 	}
 
 	.logo {
 		max-width: 80%;
 		height: auto;
 		margin-top: 1rem;
-	}
-
-	@media (max-width: 768px) {
-		.overlay-text {
-			font-size: 1.2rem;
-		}
 	}
 </style>
