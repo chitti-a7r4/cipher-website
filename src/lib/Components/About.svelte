@@ -112,7 +112,6 @@
 		overflow: hidden;
 	}
 
-	/* Optional: make letter text centered on mobile */
 	@media (max-width: 768px) {
 		.letter {
 			text-align: center;
