@@ -54,20 +54,24 @@
 	.Lheading {
 		text-align: center;
 		padding: 50px;
+		max-width: auto;
 	}
 	.Heading {
 		text-align: center;
 		padding: 50px;
+		max-width: auto;
 	}
 	.Content {
 		text-align: center;
 		padding: 50px;
+		max-width: auto;
 	}
 	.About-club {
 		text-align: center;
 		padding: 50px;
 		background: #0b0b0b;
 		color: white;
+		max-width: auto;
 	}
 	.title {
 		padding-top: 50px;

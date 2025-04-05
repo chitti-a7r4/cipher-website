@@ -19,6 +19,9 @@
 	.logo {
 		text-align: center;
 		padding: 0px;
+		padding-bottom: 15px;
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	.hero {
@@ -26,22 +29,28 @@
 		padding: 0px;
 		background: #0b0b0b;
 		color: white;
+		max-height: 100%;
+		max-width: 100%;
 	}
 	.video-container {
 		position: relative;
 		width: 100%;
 		height: auto;
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	video {
 		width: 100%;
 		height: auto;
 		display: block;
+		max-height: 100%;
+		max-width: 100%;
 	}
 
 	.overlay-text {
 		max-width: 1024px;
-
+		max-height: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
