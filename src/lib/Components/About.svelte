@@ -4,8 +4,8 @@
 
 <section class="About-club bg-black">
 	<div class="About md:container md:mx-auto">
-		<h1 class="text-bold pink title">Discover Cipher's Essence</h1>
-		<p class="text-white">
+		<h1 class="text-bold pink title Heading">Discover Cipher's Essence</h1>
+		<p class="Content text-white">
 			Cipher is a dynamic community for B.Tech students in North-Eastern Hill University, Shillong
 			passionate about technology and innovation. Our mission is to foster a collaborative
 			environment where members can enhance their technical skills, share knowledge, and work on
@@ -25,7 +25,7 @@
 		</p>
 	</div>
 	<div class="President md:container md:mx-auto">
-		<h2 class="text-bold pink">Letter From Our President</h2>
+		<h2 class="text-bold pink Lheading">Letter From Our President</h2>
 		<div class="container">
 			<div class="image">
 				<img src={president} alt="" />
@@ -51,6 +51,18 @@
 </section>
 
 <style>
+	.Lheading {
+		text-align: center;
+		padding: 50px;
+	}
+	.Heading {
+		text-align: center;
+		padding: 50px;
+	}
+	.Content {
+		text-align: center;
+		padding: 50px;
+	}
 	.About-club {
 		text-align: center;
 		padding: 50px;

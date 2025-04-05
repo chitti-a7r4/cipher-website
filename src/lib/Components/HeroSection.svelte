@@ -16,9 +16,14 @@
 </section>
 
 <style>
+	.logo {
+		text-align: center;
+		padding: 0px;
+	}
+
 	.hero {
 		text-align: center;
-		padding: 50px;
+		padding: 0px;
 		background: #0b0b0b;
 		color: white;
 	}
