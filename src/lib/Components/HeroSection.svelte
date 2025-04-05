@@ -7,7 +7,7 @@
 	<div class="video-container">
 		<video src={background} autoplay muted loop> </video>
 		<div class="overlay-text">
-			<h1 class="text-bold">Cipher.</h1>
+			<!-- <h1 class="text-bold">Cipher.</h1> -->
 
 			<h2 class="mb-xs">Explore IT Excellences with</h2>
 			<img class="logo" src={logo} alt="Cipher Logo" />
