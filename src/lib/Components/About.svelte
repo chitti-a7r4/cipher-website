@@ -51,69 +51,71 @@
 </section>
 
 <style>
-	.Lheading {
-		text-align: center;
-		padding: 50px;
-		max-width: auto;
-	}
-	.Heading {
-		text-align: center;
-		padding: 50px;
-		max-width: auto;
-	}
-	.Content {
-		text-align: center;
-		padding: 50px;
-		max-width: auto;
-	}
 	.About-club {
 		text-align: center;
-		padding: 50px;
+		padding: 2rem;
 		background: #0b0b0b;
 		color: white;
-		max-width: auto;
+		overflow-x: hidden;
 	}
-	.title {
-		padding-top: 50px;
-	}
-	.About {
-		margin-top: auto;
-		margin-bottom: auto;
-		margin-left: auto;
-		margin-right: auto;
+
+	.Heading,
+	.Lheading {
 		text-align: center;
-		padding-left: 100px;
-		padding-right: 100px;
+		padding: 2rem 1rem;
+		font-size: 3.5rem;
 	}
+
+	@media (max-width: 768px) {
+		.Heading,
+		.Lheading {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+	}
+
+	.Content {
+		text-align: center;
+		padding: 1rem;
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.About,
 	.President {
-		margin-top: auto;
-		margin-bottom: auto;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		padding-left: 100px;
-		padding-right: 100px;
-		padding-top: 100px;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 2rem 1rem;
 	}
+
 	.container {
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		gap: 20px;
-		padding: 20px;
+		align-items: flex-start;
+		flex-wrap: wrap; /* ✅ Important for responsiveness */
+		gap: 2rem;
 	}
 
 	.letter {
 		max-width: 500px;
 		color: white;
-		font-size: 16px;
+		font-size: 1rem;
+		text-align: left;
+		line-height: 1.6;
 	}
 
 	.image {
 		width: 300px;
+		max-width: 90%;
 		height: auto;
-
 		border-radius: var(--radius-xl);
 		overflow: hidden;
+	}
+
+	/* Optional: make letter text centered on mobile */
+	@media (max-width: 768px) {
+		.letter {
+			text-align: center;
+		}
 	}
 </style>

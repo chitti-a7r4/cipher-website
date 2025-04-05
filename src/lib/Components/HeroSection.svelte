@@ -16,41 +16,40 @@
 </section>
 
 <style>
-	.logo {
-		text-align: center;
-		padding: 0px;
-		padding-bottom: 15px;
-		max-height: 100%;
-		max-width: 100%;
-	}
+	/* html,
+	body {
+		margin: 0;
+		padding: 0;
+		overflow-x: hidden; 
+	} */
 
 	.hero {
-		text-align: center;
-		padding: 0px;
-		background: #0b0b0b;
-		color: white;
-		max-height: 100%;
-		max-width: 100%;
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: black;
+		overflow: hidden;
 	}
+
 	.video-container {
 		position: relative;
 		width: 100%;
-		height: auto;
-		max-height: 100%;
 		max-width: 100%;
+		height: auto;
+		overflow: hidden;
 	}
 
 	video {
 		width: 100%;
 		height: auto;
 		display: block;
-		max-height: 100%;
-		max-width: 100%;
+		object-fit: cover;
 	}
 
 	.overlay-text {
-		max-width: 1024px;
-		max-height: 100%;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -60,5 +59,20 @@
 		font-size: 2rem;
 		font-weight: bold;
 		text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+		max-width: 90vw;
+		padding: 1rem;
+		box-sizing: border-box;
+	}
+
+	.logo {
+		max-width: 80%;
+		height: auto;
+		margin-top: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		.overlay-text {
+			font-size: 1.2rem;
+		}
 	}
 </style>

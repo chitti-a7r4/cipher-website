@@ -201,7 +201,6 @@
 				<p>{member.description}</p>
 				<div class="links">
 					<a href={member.linkedin} target="_blank">LinkedIn</a>
-					<!-- <a href={member.github} target="_blank">GitHub</a> -->
 				</div>
 			</div>
 		{/each}
@@ -247,5 +246,12 @@
 		margin: 5px;
 		color: #e6d5a3;
 		text-decoration: none;
+	}
+
+	@media (max-width: 600px) {
+		img {
+			width: 80px;
+			height: 80px;
+		}
 	}
 </style>
