@@ -6,7 +6,7 @@
 	import quiz from '$assets/quiz.png';
 	import treasure from '$assets/tre2.png';
 	import national from '$assets/national.png';
-
+	import SectionWrapper from './SectionWrapper.svelte';
 	let categories = [
 		{
 			title: 'Ethnic Day',
@@ -46,29 +46,31 @@
 	}
 </script>
 
-<section class="container" in:fade>
-	<div class="categories">
-		<h1 class="pink">Cipher's Exciting Events</h1>
-		{#each categories as category, i}
-			<h2 on:click={() => activeIndex.set(i)} class:selected={$activeIndex === i}>
-				{category.title}
-			</h2>
-		{/each}
-	</div>
+<SectionWrapper divId="events">
+	<div class="container" in:fade>
+		<div class="categories">
+			<h1 class="pink">Cipher's Exciting Events</h1>
+			{#each categories as category, i}
+				<h2 on:click={() => activeIndex.set(i)} class:selected={$activeIndex === i}>
+					{category.title}
+				</h2>
+			{/each}
+		</div>
 
-	<div class="content">
-		<button on:click={prevCategory}>&lt;</button>
-		<p>{$activeIndex >= 0 ? categories[$activeIndex].desc : ''}</p>
-		<button on:click={nextCategory}>&gt;</button>
-	</div>
+		<div class="content">
+			<button on:click={prevCategory}>&lt;</button>
+			<p>{$activeIndex >= 0 ? categories[$activeIndex].desc : ''}</p>
+			<button on:click={nextCategory}>&gt;</button>
+		</div>
 
-	<div class="image">
-		<img
-			src={$activeIndex >= 0 ? categories[$activeIndex].image : ''}
-			alt={categories[$activeIndex]?.title}
-		/>
+		<div class="image">
+			<img
+				src={$activeIndex >= 0 ? categories[$activeIndex].image : ''}
+				alt={categories[$activeIndex]?.title}
+			/>
+		</div>
 	</div>
-</section>
+</SectionWrapper>
 
 <style>
 	.container {
@@ -79,7 +81,7 @@
 		padding: 50px;
 		background: #0b0b0b;
 		color: white;
-		width: 100%;
+		width: 100vw;
 		min-height: 100%;
 		box-sizing: border-box;
 		max-width: 100vw;

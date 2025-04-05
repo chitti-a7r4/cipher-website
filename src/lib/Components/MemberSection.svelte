@@ -1,5 +1,6 @@
 <script>
 	import Saqib from '$assets/president.png';
+	import SectionWrapper from './SectionWrapper.svelte';
 
 	export let members = [
 		{
@@ -190,25 +191,28 @@
 	];
 </script>
 
-<section class="members">
-	<h2>Meet Our Team</h2>
-	<div class="grid">
-		{#each members as member}
-			<div class="member-card">
-				<img src={member.image} alt={member.name} />
-				<h3>{member.name}</h3>
-				<p>{member.role}</p>
-				<p>{member.description}</p>
-				<div class="links">
-					<a href={member.linkedin} target="_blank">LinkedIn</a>
+<SectionWrapper divId="team">
+	<div class="members">
+		<h2>Meet Our Team</h2>
+		<div class="grid">
+			{#each members as member}
+				<div class="member-card">
+					<img src={member.image} alt={member.name} />
+					<h3>{member.name}</h3>
+					<p>{member.role}</p>
+					<p>{member.description}</p>
+					<div class="links">
+						<a href={member.linkedin} target="_blank">LinkedIn</a>
+					</div>
 				</div>
-			</div>
-		{/each}
+			{/each}
+		</div>
 	</div>
-</section>
+</SectionWrapper>
 
 <style>
 	.members {
+		width: 100vw;
 		text-align: center;
 		padding: 50px;
 		background: #0b0b0b;
