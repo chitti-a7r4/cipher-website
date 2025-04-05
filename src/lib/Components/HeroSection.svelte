@@ -16,6 +16,20 @@
 </section>
 
 <style>
+	.hero {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px;
+		background: #0b0b0b;
+		color: white;
+		width: 100%;
+		min-height: 100%;
+		box-sizing: border-box;
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
 	.video-container {
 		position: relative;
 		width: 100%;
@@ -29,6 +43,8 @@
 	}
 
 	.overlay-text {
+		max-width: 1024px;
+
 		position: absolute;
 		top: 50%;
 		left: 50%;
