@@ -29,6 +29,10 @@
 </nav>
 
 <style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	.navbar {
 		background-color: #0b0b0b;
 		color: white;
@@ -58,7 +62,10 @@
 		display: flex;
 		gap: 2rem;
 		list-style: none;
-		transition: max-height 0.3s ease-in-out;
+		transition:
+			max-height 0.3s ease-in-out,
+			visibility 0.3s ease-in-out,
+			opacity 0.3s ease-in-out;
 	}
 
 	li a {
@@ -106,10 +113,14 @@
 			text-align: center;
 			max-height: 0;
 			overflow: hidden;
+			visibility: hidden;
+			opacity: 0;
 		}
 
 		ul.open {
 			max-height: 300px;
+			visibility: visible;
+			opacity: 1;
 		}
 	}
 
@@ -117,6 +128,6 @@
 	:global(#events),
 	:global(#team),
 	:global(#contact) {
-		scroll-margin-top: 100px;
+		scroll-margin-top: 140px;
 	}
 </style>

@@ -49,7 +49,7 @@
 <SectionWrapper divId="events">
 	<div class="container" in:fade>
 		<div class="categories">
-			<h1 class="pink">Cipher's Exciting Events</h1>
+			<h1 class="Heading pink">Cipher's Exciting Events</h1>
 			{#each categories as category, i}
 				<h2 on:click={() => activeIndex.set(i)} class:selected={$activeIndex === i}>
 					{category.title}
@@ -73,6 +73,11 @@
 </SectionWrapper>
 
 <style>
+	.Heading {
+		text-align: center;
+		padding: 2rem 1rem;
+		font-size: 3.5rem;
+	}
 	.container {
 		display: flex;
 		flex-wrap: wrap;

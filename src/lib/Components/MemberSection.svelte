@@ -251,7 +251,7 @@
 		margin: 5px;
 		color: #e6d5a3;
 		text-decoration: none;
-		font-size: 1rem; /* ↓ Smaller font size */
+		font-size: 1rem;
 		font-weight: 500;
 		transition: color 0.2s ease-in-out;
 	}
