@@ -90,6 +90,7 @@
 
 	.categories {
 		width: 30%;
+		font-size: 3.5rem;
 	}
 
 	.categories h2 {

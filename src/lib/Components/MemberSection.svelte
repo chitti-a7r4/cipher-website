@@ -217,6 +217,7 @@
 		padding: 50px;
 		background: #0b0b0b;
 		color: white;
+		font-size: 3.5rem;
 	}
 
 	.grid {
@@ -250,6 +251,14 @@
 		margin: 5px;
 		color: #e6d5a3;
 		text-decoration: none;
+		font-size: 1rem; /* ↓ Smaller font size */
+		font-weight: 500;
+		transition: color 0.2s ease-in-out;
+	}
+
+	.links a:hover {
+		color: #f5e7b1;
+		text-decoration: underline;
 	}
 
 	@media (max-width: 600px) {

@@ -13,7 +13,7 @@
 			<img src={logo} alt="Cipher Logo" />
 		</a>
 
-		<button class="hamburger" on:click={toggleMenu} aria-label="Toggle Menu">
+		<button class="hamburger" on:click={toggleMenu} aria-label="Toggle Menu" aria-expanded={isOpen}>
 			<div class="bar"></div>
 			<div class="bar"></div>
 			<div class="bar"></div>
@@ -22,7 +22,6 @@
 		<ul class:open={isOpen}>
 			<li><a href="#about">About</a></li>
 			<li><a href="#events">Events</a></li>
-
 			<li><a href="#team">Team</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
@@ -69,8 +68,10 @@
 		transition: color 0.3s;
 	}
 
-	li a:hover {
-		color: #f0f;
+	li a:hover,
+	li a:focus {
+		color: #ff00ff;
+		outline: none;
 	}
 
 	.hamburger {
@@ -110,5 +111,12 @@
 		ul.open {
 			max-height: 300px;
 		}
+	}
+
+	:global(#about),
+	:global(#events),
+	:global(#team),
+	:global(#contact) {
+		scroll-margin-top: 100px;
 	}
 </style>
