@@ -24,6 +24,8 @@
 		justify-content: center;
 		background-color: black;
 		overflow: hidden;
+		/* 👇 Add margin to offset the fixed navbar */
+		margin-top: 5rem;
 	}
 
 	.video-container {
