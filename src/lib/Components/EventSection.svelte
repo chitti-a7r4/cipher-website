@@ -56,18 +56,16 @@
 				</h2>
 			{/each}
 		</div>
-
-		<div class="content">
-			<button on:click={prevCategory}>&lt;</button>
-			<p>{$activeIndex >= 0 ? categories[$activeIndex].desc : ''}</p>
-			<button on:click={nextCategory}>&gt;</button>
-		</div>
-
 		<div class="image">
 			<img
 				src={$activeIndex >= 0 ? categories[$activeIndex].image : ''}
 				alt={categories[$activeIndex]?.title}
 			/>
+		</div>
+		<div class="content">
+			<button on:click={prevCategory}>&lt;</button>
+			<p>{$activeIndex >= 0 ? categories[$activeIndex].desc : ''}</p>
+			<button on:click={nextCategory}>&gt;</button>
 		</div>
 	</div>
 </SectionWrapper>
@@ -76,7 +74,7 @@
 	.Heading {
 		text-align: center;
 		padding: 2rem 1rem;
-		font-size: 3.5rem;
+		font-size: 5rem;
 	}
 	.container {
 		display: flex;
@@ -142,6 +140,6 @@
 		color: white;
 		padding: 0.5rem;
 		cursor: pointer;
-		font-size: 1.5rem;
+		font-size: 4rem;
 	}
 </style>

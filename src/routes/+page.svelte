@@ -4,6 +4,7 @@
 	import About from '$lib/Components/About.svelte';
 	import EventSection from '$lib/Components/EventSection.svelte';
 	import MemberSection from '$lib/Components/MemberSection.svelte';
+	import Membership from '$lib/Components/Membership.svelte';
 	import ContactForm from '$lib/Components/ContactForm.svelte';
 	import Footer from '$lib/Components/Footer.svelte';
 </script>
@@ -13,5 +14,6 @@
 <About />
 <EventSection />
 <MemberSection />
+<Membership />
 <ContactForm />
 <Footer />

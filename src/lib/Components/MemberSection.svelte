@@ -232,6 +232,10 @@
 		padding: 20px;
 		border-radius: 10px;
 		transition: transform 0.3s ease-in-out;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 	}
 
 	.member-card:hover {
