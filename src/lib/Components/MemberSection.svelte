@@ -183,9 +183,17 @@
 		{
 			name: 'Drona Bopche',
 			role: 'Asst. Executive Sec V',
-			description: 'BTech IT 2nd YearBTech IT 2nd Year',
+			description: 'BTech IT 2nd Year',
 			image: Saqib,
 			linkedin: 'https://www.linkedin.com/in/drona-bopche-2345292b1/',
+			github: ''
+		},
+		{
+			name: 'Anurag Saud',
+			role: 'Web Developer',
+			description: 'BTech ECE 1st Year',
+			image: Saqib,
+			linkedin: 'https://www.linkedin.com/in/anuragsaud/',
 			github: ''
 		}
 	];

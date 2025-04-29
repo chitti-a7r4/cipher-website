@@ -48,8 +48,10 @@
 
 <SectionWrapper divId="events">
 	<div class="container" in:fade>
-		<div class="categories">
+		<div>
 			<h1 class="Heading pink">Cipher's Exciting Events</h1>
+		</div>
+		<div class="categories">
 			{#each categories as category, i}
 				<h2 on:click={() => activeIndex.set(i)} class:selected={$activeIndex === i}>
 					{category.title}
@@ -63,9 +65,9 @@
 			/>
 		</div>
 		<div class="content">
-			<button on:click={prevCategory}>&lt;</button>
+			<!-- <button on:click={prevCategory}>&lt;</button>
 			<p>{$activeIndex >= 0 ? categories[$activeIndex].desc : ''}</p>
-			<button on:click={nextCategory}>&gt;</button>
+			<button on:click={nextCategory}>&gt;</button> -->
 		</div>
 	</div>
 </SectionWrapper>
@@ -79,7 +81,8 @@
 	.container {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
+
 		align-items: center;
 		padding: 50px;
 		background: #0b0b0b;
@@ -94,6 +97,18 @@
 	.categories {
 		width: 30%;
 		font-size: 3.5rem;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding: 50px;
+		background: #0b0b0b;
+		color: white;
+		width: 100vw;
+		min-height: 100%;
+		box-sizing: border-box;
+		max-width: 100vw;
+		overflow-x: hidden;
 	}
 
 	.categories h2 {

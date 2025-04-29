@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { supabase } from '$lib/supabase';
 	import SectionWrapper from './SectionWrapper.svelte';
+	import Map from '$assets/NehuMap.png';
 
 	let name = '';
 	let email = '';
@@ -20,7 +21,9 @@
 
 		loading = true;
 
-		const { error: insertError } = await supabase.from('cipher').insert([{ name, email, message }]);
+		const { error: insertError } = await supabase
+			.from('contact_form')
+			.insert([{ name, email, message }]);
 
 		loading = false;
 
@@ -46,7 +49,7 @@
 				{/if}
 
 				{#if success}
-					<p class="success">Message sent successfully! 🎉</p>
+					<p class="success">Message sent successfully!</p>
 				{/if}
 
 				<input type="text" placeholder="Your Name" bind:value={name} />
@@ -62,6 +65,23 @@
 				</button>
 			</form>
 		</div>
+		<div class="contact-information">
+			<h2>Contact Information</h2>
+			<p><span class="Dark">Club Name:</span> Cipher</p>
+			<p><span class="Dark">President Name:</span> Mohammad Saqib</p>
+			<p><span class="Dark">Phone Number:</span> +91 74558 14271</p>
+			<p><span class="Dark">Email:</span> theciphernehu@gmail.com</p>
+
+			<p>
+				<span class="Dark">Address: </span>
+				<span class="link">
+					<a href="https://maps.app.goo.gl/8ZFBHyXG3MzBXRSd9 " target="_blank">
+						Department of IT,School of Technology, NEHU Campus, Shillong, Meghalaya
+					</a>
+				</span>
+			</p>
+			<img src={Map} alt="" />
+		</div>
 	</div>
 </SectionWrapper>
 
@@ -73,6 +93,21 @@
 		background: #0b0b0b;
 		color: white;
 		font-family: 'Inter', sans-serif;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+		border-radius: 1rem;
+		box-shadow: 0 0 20px #ff00ff33;
+		margin-top: 100px;
+	}
+	.Dark {
+		font-weight: bold;
+	}
+	.link {
+		text-decoration: none;
+		font-size: 1.2rem;
+		text-decoration: underline;
 	}
 
 	.page-bg {
@@ -88,7 +123,19 @@
 		justify-content: flex-start;
 		padding: 6rem;
 	}
+	.contact-information {
+		padding: 6rem;
+		background: #141414;
+		color: white;
+		padding: 3rem;
+		border-radius: 1.5rem;
+		width: 100%;
+		max-width: 700px;
 
+		flex-direction: column;
+		gap: 1.5rem;
+		box-shadow: 0 0 40px #ff00ff33;
+	}
 	.contact-form {
 		background: #141414;
 		color: white;
@@ -166,6 +213,11 @@
 		}
 
 		.contact-form {
+			padding: 2rem;
+			border-radius: 1rem;
+			box-shadow: 0 0 20px #ff00ff33;
+		}
+		.contact-information {
 			padding: 2rem;
 			border-radius: 1rem;
 			box-shadow: 0 0 20px #ff00ff33;

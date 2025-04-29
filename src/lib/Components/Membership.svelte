@@ -31,7 +31,7 @@
 
 <SectionWrapper divId="membership">
 	<section class="membership-section">
-		<h1>🔍 Check your Membership</h1>
+		<h1>Check your Membership</h1>
 
 		<div class="membership-card">
 			<div class="form-box">

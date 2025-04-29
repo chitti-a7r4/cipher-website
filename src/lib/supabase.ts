@@ -7,7 +7,7 @@ const supabaseKey = PUBLIC_SUPABASE_ANON_KEY;
 export const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function submitContactForm(name: string, email: string, message: string) {
-	const { data, error } = await supabase.from('cipher').insert([{ name, email, message }]);
+	const { data, error } = await supabase.from('contact_form').insert([{ name, email, message }]);
 
 	if (error) {
 		console.error('Error inserting:', error.message);
