@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { supabase } from '$lib/supabase';
 	import SectionWrapper from './SectionWrapper.svelte';
-	import Map from '$assets/NehuMap.png';
+	import Map from '$assets/nehumap.png';
 
 	let name = '';
 	let email = '';
