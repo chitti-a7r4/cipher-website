@@ -7,26 +7,30 @@
 	let dob = '';
 	let userMessage = 'Enter details to check membership.';
 
-	const checkMembership = async () => {
-		if (!cipherId || !email || !dob) {
-			userMessage = '⚠️ Please fill in all fields.';
-			return;
-		}
+	import { goto } from '$app/navigation'; // Add this at the top
 
-		const { data, error } = await supabase
-			.from('cipher')
-			.select('*')
-			.eq('cipher_id', cipherId)
-			.eq('email', email)
-			.eq('dob', dob)
-			.single();
+const checkMembership = async () => {
+	if (!cipherId || !email || !dob) {
+		userMessage = '⚠️ Please fill in all fields.';
+		return;
+	}
 
-		if (error || !data) {
-			userMessage = '❌ No member found with the provided Cipher ID, Email, and Date of Birth.';
-		} else {
-			userMessage = `✅ Member Found: ${data.name} (${data.department})`;
-		}
-	};
+	const { data, error } = await supabase
+		.from('cipher')
+		.select('*')
+		.eq('cipher_id', cipherId)
+		.eq('email', email)
+		.eq('dob', dob)
+		.single();
+
+	if (error || !data) {
+		userMessage = '❌ No member found with the provided Cipher ID, Email, and Date of Birth.';
+	} else {
+		userMessage = `✅ Member Found: ${data.name} (${data.department})`;
+		goto(`?found=true&cipherId=${encodeURIComponent(cipherId)}`, { replaceState: false, keepFocus: true, noScroll: true });
+	}
+};
+
 </script>
 
 <SectionWrapper divId="membership">
